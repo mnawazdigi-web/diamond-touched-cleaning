@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Touch Cleaning — London's Premium Cleaning Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sky:#EAF4FB;
+  --sky-mid:#C8E4F5;
+  --sky-deep:#5BAADC;
+  --teal:#1A8C7A;
+  --teal-light:#2AB09A;
+  --teal-pale:#E3F6F2;
+  --mint:#F0FBF8;
+  --slate:#1E3040;
+  --slate-mid:#2E4A60;
+  --white:#FFFFFF;
+  --off-white:#F7FBFC;
+  --text:#1E3040;
+  --text-mid:#3E5A70;
+  --text-soft:#7A9BAE;
+  --border:#D0E8F2;
+  --r:6px;
+  --r-lg:14px;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--off-white);color:var(--text);font-size:15px;line-height:1.6;overflow-x:hidden}
+
+/* ── PAGE SYSTEM ── */
+.page{display:none;animation:fadeIn .35s ease}
+.page.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 52px;height:70px;
+}
+.nav-logo{display:flex;align-items:center;gap:11px;cursor:pointer}
+.nav-logo-mark{
+  width:38px;height:38px;
+  background:var(--teal);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.nav-logo-text strong{
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:500;
+  color:var(--slate);letter-spacing:.01em;
+  line-height:1.1;
+}
+.nav-logo-text span{
+  font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--teal);
+}
+.nav-links{display:flex;align-items:center;gap:6px;list-style:none}
+.nav-links a{
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;
+  color:var(--text-mid);text-decoration:none;
+  padding:8px 14px;border-radius:var(--r);
+  transition:all .2s;
+}
+.nav-links a:hover{color:var(--teal);background:var(--teal-pale)}
+.nav-links a.active{color:var(--teal)}
+.nav-book{
+  background:var(--teal)!important;
+  color:var(--white)!important;
+  padding:9px 22px!important;
+  border-radius:var(--r)!important;
+}
+.nav-book:hover{background:var(--teal-light)!important;transform:translateY(-1px);box-shadow:0 4px 16px rgba(26,140,122,.25)!important}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:8px;cursor:pointer;transition:all .22s;text-decoration:none;font-family:'Jost',sans-serif;font-weight:500;letter-spacing:.06em;font-size:13px;border:none}
+.btn-teal{background:var(--teal);color:#fff;padding:14px 30px;border-radius:var(--r);box-shadow:0 4px 20px rgba(26,140,122,.2)}
+.btn-teal:hover{background:var(--teal-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,140,122,.28)}
+.btn-outline{background:transparent;color:var(--teal);padding:13px 28px;border-radius:var(--r);border:1.5px solid var(--teal)}
+.btn-outline:hover{background:var(--teal-pale)}
+.btn-white{background:#fff;color:var(--teal);padding:14px 30px;border-radius:var(--r);box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.14)}
+.btn-arrow::after{content:'→';transition:transform .2s}
+.btn-arrow:hover::after{transform:translateX(4px)}
+
+/* ── SECTION LABELS ── */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
+  color:var(--teal);margin-bottom:14px;
+}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--teal);border-radius:2px}
+
+/* ── CARDS ── */
+.card{background:#fff;border-radius:var(--r-lg);border:1px solid var(--border)}
+
+/* ─────────────────────────────────────────────────
+   HOMEPAGE
+───────────────────────────────────────────────── */
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#EBF7F4 0%,#D5EEF8 60%,#E8F5FB 100%);
+  padding:80px 52px 0;
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;
+  overflow:hidden;min-height:560px;position:relative;
+}
+.hero::before{
+  content:'';position:absolute;
+  right:-80px;top:-80px;
+  width:500px;height:500px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(91,170,220,.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-left{padding-bottom:72px}
+.hero-h1{
+  font-family:'Playfair Display',serif;
+  font-size:58px;font-weight:400;line-height:1.08;
+  color:var(--slate);margin-bottom:20px;
+}
+.hero-h1 em{font-style:italic;color:var(--teal)}
+.hero-sub{
+  font-size:16px;color:var(--text-mid);line-height:1.75;
+  max-width:420px;margin-bottom:36px;font-weight:300;
+}
+.hero-actions{display:flex;align-items:center;gap:16px;margin-bottom:48px}
+.hero-proof{
+  display:flex;align-items:center;gap:20px;
+  padding:16px 20px;
+  background:rgba(255,255,255,.75);
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:var(--r-lg);
+  backdrop-filter:blur(8px);
+  width:fit-content;
+}
+.hero-proof-avatars{display:flex}
+.avatar{
+  width:34px;height:34px;border-radius:50%;
+  border:2px solid #fff;
+  background:var(--sky-mid);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:500;color:var(--slate-mid);
+  margin-left:-8px;
+}
+.avatar:first-child{margin-left:0}
+.hero-proof-text{font-size:13px;color:var(--text-mid)}
+.hero-proof-text strong{color:var(--slate);display:block;font-size:14px}
+.hero-right{position:relative;display:flex;align-items:flex-end;justify-content:center}
+.hero-img-box{
+  width:100%;max-width:460px;
+  height:440px;
+  background:linear-gradient(160deg,#C8E4F5 0%,#9DD5EE 50%,#B2E6DE 100%);
+  border-radius:var(--r-lg) var(--r-lg) 0 0;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-img-box::after{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3Ccircle cx='27' cy='7' r='1'/%3E%3Ccircle cx='47' cy='7' r='1'/%3E%3Ccircle cx='7' cy='27' r='1'/%3E%3Ccircle cx='27' cy='27' r='1'/%3E%3Ccircle cx='47' cy='27' r='1'/%3E%3Ccircle cx='7' cy='47' r='1'/%3E%3Ccircle cx='27' cy='47' r='1'/%3E%3Ccircle cx='47' cy='47' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-img-label{
+  position:relative;z-index:1;
+  text-align:center;color:rgba(30,48,64,.35);
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+}
+.hero-float-card{
+  position:absolute;
+  bottom:36px;left:-28px;
+  background:#fff;
+  border-radius:var(--r-lg);
+  padding:18px 20px;
+  box-shadow:0 12px 40px rgba(26,140,122,.15);
+  min-width:200px;
+  border:1px solid rgba(26,140,122,.12);
+}
+.hfc-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.hfc-dot{width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px rgba(26,140,122,.2)}
+.hfc-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft)}
+.hfc-big{font-family:'Playfair Display',serif;font-size:30px;color:var(--slate)}
+.hfc-sub{font-size:11px;color:var(--text-soft)}
+.hero-float-rating{
+  position:absolute;top:40px;right:-20px;
+  background:#fff;border-radius:var(--r-lg);
+  padding:14px 18px;
+  box-shadow:0 12px 40px rgba(91,170,220,.2);
+  border:1px solid var(--border);
+}
+.stars{color:#F4B942;font-size:14px;letter-spacing:2px;margin-bottom:3px}
+.rating-text{font-size:11px;color:var(--text-soft)}
+
+/* TRUST STRIP */
+.trust-strip{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  padding:16px 52px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-mid)}
+.trust-item svg{color:var(--teal)}
+.trust-div{width:1px;height:24px;background:var(--border)}
+
+/* WHY US */
+.why-section{padding:90px 52px;background:var(--white)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.why-points{display:flex;flex-direction:column;gap:20px;margin-top:36px}
+.why-pt{
+  display:flex;gap:16px;
+  padding:20px;border-radius:var(--r-lg);
+  border:1px solid var(--border);
+  transition:all .25s;
+}
+.why-pt:hover{border-color:var(--sky-deep);background:var(--mint);transform:translateX(4px)}
+.why-pt-icon{
+  width:44px;height:44px;flex-shrink:0;
+  background:var(--teal-pale);border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;
+}
+.why-pt h4{font-size:14px;font-weight:500;color:var(--slate);margin-bottom:3px}
+.why-pt p{font-size:13px;color:var(--text-soft);line-height:1.6}
+.why-visual{
+  background:linear-gradient(145deg,var(--teal-pale),var(--sky));
+  border-radius:var(--r-lg);
+  height:440px;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.why-visual-inner{
+  text-align:center;
+  color:rgba(30,48,64,.25);
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+}
+.why-stat-card{
+  position:absolute;bottom:28px;right:28px;left:28px;
+  background:#fff;border-radius:var(--r-lg);padding:20px 24px;
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;
+  box-shadow:0 4px 24px rgba(26,140,122,.1);
+}
+.wsc-item{text-align:center}
+.wsc-num{font-family:'Playfair Display',serif;font-size:26px;color:var(--teal)}
+.wsc-lbl{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft);margin-top:2px}
+
+/* SERVICES */
+.services-section{padding:90px 52px;background:var(--off-white)}
+.services-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{
+  background:#fff;border-radius:var(--r-lg);
+  border:1px solid var(--border);
+  padding:32px 28px;
+  transition:all .28s;cursor:pointer;
+  position:relative;overflow:hidden;
+}
+.service-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:var(--teal);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .3s;
+}
+.service-card:hover{border-color:transparent;box-shadow:0 12px 40px rgba(26,140,122,.12);transform:translateY(-4px)}
+.service-card:hover::before{transform:scaleX(1)}
+.sc-icon{
+  width:52px;height:52px;
+  background:var(--teal-pale);
+  border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+}
+.sc-cat{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-soft);margin-bottom:8px}
+.service-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--slate);margin-bottom:10px}
+.service-card p{font-size:13px;color:var(--text-soft);line-height:1.7;margin-bottom:18px}
+.sc-price{
+  font-size:12px;font-weight:500;letter-spacing:.06em;
+  color:var(--teal);
+  padding-top:16px;border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+}
+
+/* PROCESS */
+.process-section{
+  padding:90px 52px;
+  background:linear-gradient(135deg,var(--slate) 0%,var(--slate-mid) 100%);
+  position:relative;overflow:hidden;
+}
+.process-section::before{
+  content:'';position:absolute;
+  right:-100px;bottom:-100px;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(91,170,220,.08) 0%,transparent 70%);
+}
+.process-section .eyebrow{color:var(--sky-mid)}
+.process-section .eyebrow::before{background:var(--sky-mid)}
+.process-h{
+  font-family:'Playfair Display',serif;
+  font-size:44px;font-weight:400;color:#fff;
+  margin-bottom:56px;line-height:1.1;
+}
+.process-h em{font-style:italic;color:var(--sky-deep)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.process-line{
+  position:absolute;top:28px;left:10%;right:10%;height:1px;
+  background:rgba(255,255,255,.1);
+  z-index:0;
+}
+.step{position:relative;z-index:1;text-align:center}
+.step-circle{
+  width:56px;height:56px;border-radius:50%;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:500;color:var(--sky-deep);
+  transition:all .3s;
+}
+.step:hover .step-circle{background:var(--teal);border-color:var(--teal);color:#fff}
+.step h4{font-size:14px;font-weight:500;color:#fff;margin-bottom:8px}
+.step p{font-size:12px;color:rgba(255,255,255,.5);line-height:1.65}
+
+/* TESTIMONIALS */
+.testimonials-section{padding:90px 52px;background:#fff}
+.testi-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:24px;margin-top:48px}
+.testi-card{
+  padding:32px;border-radius:var(--r-lg);
+  border:1px solid var(--border);
+  transition:all .25s;
+}
+.testi-card:hover{border-color:var(--sky-mid);box-shadow:0 8px 32px rgba(91,170,220,.1)}
+.testi-card.primary{
+  background:linear-gradient(145deg,var(--teal),var(--teal-light));
+  border-color:transparent;
+}
+.testi-card.primary:hover{box-shadow:0 12px 40px rgba(26,140,122,.25)}
+.quote-icon{font-size:36px;line-height:1;color:var(--sky-mid);margin-bottom:14px;font-family:'Playfair Display',serif}
+.testi-card.primary .quote-icon{color:rgba(255,255,255,.4)}
+.testi-text{font-size:14px;line-height:1.8;color:var(--text-mid);font-style:italic;margin-bottom:24px}
+.testi-card.primary .testi-text{color:rgba(255,255,255,.85)}
+.testi-reviewer{display:flex;align-items:center;gap:12px}
+.rev-av{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--teal-pale);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:500;color:var(--teal);
+}
+.testi-card.primary .rev-av{background:rgba(255,255,255,.2);color:#fff}
+.rev-name{font-size:13px;font-weight:500;color:var(--slate)}
+.testi-card.primary .rev-name{color:#fff}
+.rev-loc{font-size:11px;color:var(--text-soft)}
+.testi-card.primary .rev-loc{color:rgba(255,255,255,.55)}
+.stars-sm{color:#F4B942;font-size:11px;letter-spacing:1px}
+
+/* COVERAGE */
+.coverage-section{
+  padding:70px 52px;background:var(--mint);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.coverage-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.coverage-badges{display:flex;flex-wrap:wrap;gap:8px;max-width:620px}
+.badge{
+  background:#fff;border:1px solid var(--border);
+  border-radius:20px;padding:6px 16px;
+  font-size:12px;color:var(--text-mid);font-weight:400;
+  transition:all .2s;cursor:default;
+}
+.badge:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-pale)}
+
+/* CTA */
+.cta-section{
+  padding:90px 52px;
+  background:linear-gradient(135deg,#EBF7F4 0%,#D5EEF8 100%);
+  text-align:center;position:relative;overflow:hidden;
+}
+.cta-section::before,.cta-section::after{
+  content:'';position:absolute;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,140,122,.08) 0%,transparent 70%);
+}
+.cta-section::before{width:600px;height:600px;top:-200px;left:-100px}
+.cta-section::after{width:400px;height:400px;bottom:-150px;right:-80px}
+.cta-section h2{
+  font-family:'Playfair Display',serif;
+  font-size:48px;font-weight:400;color:var(--slate);
+  margin-bottom:16px;line-height:1.1;
+  position:relative;z-index:1;
+}
+.cta-section h2 em{font-style:italic;color:var(--teal)}
+.cta-section p{font-size:16px;color:var(--text-mid);margin-bottom:36px;position:relative;z-index:1;font-weight:300}
+.cta-buttons{display:flex;align-items:center;justify-content:center;gap:16px;position:relative;z-index:1}
+.cta-contact{
+  display:flex;align-items:center;gap:40px;justify-content:center;
+  margin-top:36px;position:relative;z-index:1;
+}
+.cta-contact-item{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-mid)}
+.cta-contact-item svg{color:var(--teal)}
+
+/* FAQ */
+.faq-section{padding:90px 52px;background:#fff}
+.faq-layout{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start}
+.faq-list{display:flex;flex-direction:column;gap:0}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{
+  padding:18px 0;
+  display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;font-size:14px;font-weight:500;color:var(--slate);
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--teal)}
+.faq-q::after{content:'+';font-size:20px;color:var(--teal);font-weight:300;flex-shrink:0;margin-left:12px}
+.faq-a{padding:0 0 18px;font-size:13px;color:var(--text-soft);line-height:1.75}
+
+/* FOOTER */
+footer{background:var(--slate);padding:64px 52px 28px}
+.footer-top{
+  display:grid;grid-template-columns:1.8fr 1fr 1fr 1.4fr;gap:52px;
+  padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);
+  margin-bottom:28px;
+}
+.footer-brand-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.8;margin-top:16px;max-width:260px}
+.footer-col h5{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:18px}
+.footer-col ul{list-style:none}
+.footer-col ul li{
+  font-size:13px;color:rgba(255,255,255,.5);margin-bottom:10px;
+  cursor:pointer;transition:color .2s;
+}
+.footer-col ul li:hover{color:var(--sky-mid)}
+.footer-contact-line{font-size:13px;color:rgba(255,255,255,.5);display:flex;align-items:flex-start;gap:8px;margin-bottom:12px}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.04em;
+}
+.footer-bottom a{color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
+.footer-bottom a:hover{color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:20px}
+.social-row{display:flex;gap:10px;margin-top:18px}
+.soc-btn{
+  width:34px;height:34px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;color:rgba(255,255,255,.4);cursor:pointer;transition:all .2s;
+}
+.soc-btn:hover{border-color:var(--sky-mid);color:var(--sky-mid)}
+
+/* ─────────────────────────────────────────────────
+   SERVICES PAGE
+───────────────────────────────────────────────── */
+.page-hero{
+  background:linear-gradient(135deg,#EBF7F4 0%,#D5EEF8 100%);
+  padding:70px 52px;position:relative;overflow:hidden;
+}
+.page-hero::after{
+  content:'';position:absolute;
+  right:-60px;bottom:-60px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(91,170,220,.12) 0%,transparent 70%);
+}
+.breadcrumb{font-size:12px;color:var(--text-soft);letter-spacing:.06em;margin-bottom:18px}
+.breadcrumb span{color:var(--teal)}
+.page-hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:52px;font-weight:400;color:var(--slate);
+  line-height:1.08;margin-bottom:14px;position:relative;z-index:1;
+}
+.page-hero h1 em{font-style:italic;color:var(--teal)}
+.page-hero p{font-size:16px;color:var(--text-mid);max-width:500px;line-height:1.7;font-weight:300;position:relative;z-index:1}
+
+.services-full{padding:70px 52px;background:#fff}
+.svc-row{
+  display:grid;grid-template-columns:260px 1fr auto;gap:40px;align-items:center;
+  padding:36px 0;border-bottom:1px solid var(--border);
+}
+.svc-row:last-child{border-bottom:none}
+.svc-img{
+  height:180px;background:linear-gradient(135deg,var(--teal-pale),var(--sky));
+  border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(30,48,64,.3);
+  position:relative;overflow:hidden;flex-shrink:0;
+}
+.svc-badge-img{
+  position:absolute;top:10px;left:10px;
+  background:var(--teal);color:#fff;
+  font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 10px;border-radius:4px;
+}
+.svc-info h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:400;color:var(--slate);margin-bottom:8px}
+.svc-info p{font-size:14px;color:var(--text-soft);line-height:1.75;margin-bottom:14px;max-width:480px}
+.svc-tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{
+  font-size:11px;border:1px solid var(--border);
+  color:var(--text-mid);padding:4px 12px;border-radius:20px;
+}
+.svc-price-block{
+  text-align:right;flex-shrink:0;min-width:160px;
+  display:flex;flex-direction:column;align-items:flex-end;gap:10px;
+}
+.svc-from{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-soft)}
+.svc-price{font-family:'Playfair Display',serif;font-size:34px;color:var(--slate)}
+.svc-note{font-size:11px;color:var(--text-soft)}
+
+/* ─────────────────────────────────────────────────
+   PRICING PAGE
+───────────────────────────────────────────────── */
+.pricing-page{padding:70px 52px;background:#fff}
+.pricing-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:48px 0}
+.pc{
+  border-radius:var(--r-lg);border:1px solid var(--border);
+  padding:36px 28px;transition:all .25s;
+}
+.pc:hover{box-shadow:0 12px 40px rgba(26,140,122,.1)}
+.pc.featured{background:var(--teal);border-color:var(--teal)}
+.pc-badge{
+  display:inline-block;background:rgba(255,255,255,.2);
+  color:#fff;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 12px;border-radius:20px;margin-bottom:16px;
+}
+.pc-cat{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-soft);margin-bottom:10px}
+.pc.featured .pc-cat{color:rgba(255,255,255,.55)}
+.pc h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;color:var(--slate);margin-bottom:6px}
+.pc.featured h3{color:#fff}
+.pc-price-wrap{
+  padding:18px 0;margin:18px 0;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.pc.featured .pc-price-wrap{border-color:rgba(255,255,255,.2)}
+.pc-price{font-family:'Playfair Display',serif;font-size:42px;font-weight:400;color:var(--slate)}
+.pc.featured .pc-price{color:#fff}
+.pc-unit{font-size:12px;color:var(--text-soft);margin-top:2px}
+.pc.featured .pc-unit{color:rgba(255,255,255,.55)}
+.pc-features{list-style:none;margin-bottom:28px}
+.pc-features li{
+  font-size:13px;color:var(--text-mid);padding:8px 0;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:9px;
+}
+.pc.featured .pc-features li{color:rgba(255,255,255,.8);border-bottom-color:rgba(255,255,255,.1)}
+.pc-features li::before{content:'✓';color:var(--teal);font-size:12px;font-weight:600;flex-shrink:0}
+.pc.featured .pc-features li::before{color:rgba(255,255,255,.7)}
+
+.price-table-wrap{background:var(--off-white);padding:60px 52px}
+.ptable{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.04)}
+.ptable th{
+  background:var(--slate);color:rgba(255,255,255,.8);
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;
+  padding:14px 18px;text-align:left;
+}
+.ptable td{padding:13px 18px;font-size:13px;color:var(--text-mid);border-bottom:1px solid var(--border)}
+.ptable tr:last-child td{border-bottom:none}
+.ptable tr:hover td{background:var(--mint)}
+.ptable .price-td{font-family:'Playfair Display',serif;font-size:18px;color:var(--slate)}
+
+/* ─────────────────────────────────────────────────
+   CONTACT PAGE
+───────────────────────────────────────────────── */
+.contact-split{display:grid;grid-template-columns:1fr 1.5fr}
+.contact-left{
+  background:linear-gradient(145deg,var(--slate),var(--slate-mid));
+  padding:70px 52px;
+}
+.contact-left h2{
+  font-family:'Playfair Display',serif;
+  font-size:40px;font-weight:400;color:#fff;
+  margin-bottom:10px;line-height:1.1;
+}
+.contact-left h2 em{font-style:italic;color:var(--sky-mid)}
+.contact-left>p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:40px}
+.cd{display:flex;align-items:flex-start;gap:14px;margin-bottom:24px}
+.cd-ic{
+  width:40px;height:40px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.cd-lbl{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:3px}
+.cd-val{font-size:14px;color:rgba(255,255,255,.8)}
+.contact-right{background:#fff;padding:70px 52px}
+.contact-right h3{
+  font-family:'Playfair Display',serif;font-size:28px;font-weight:400;
+  color:var(--slate);margin-bottom:28px;
+}
+.contact-right h3 em{font-style:italic;color:var(--teal)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.fg{margin-bottom:14px}
+.fg label{
+  display:block;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--text-soft);margin-bottom:7px;
+}
+.fg input,.fg select,.fg textarea{
+  width:100%;padding:12px 14px;
+  border:1.5px solid var(--border);border-radius:var(--r);
+  font-family:'Jost',sans-serif;font-size:14px;color:var(--slate);
+  background:var(--off-white);outline:none;transition:border-color .2s;
+  appearance:none;
+}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--teal);background:#fff}
+.fg textarea{height:100px;resize:none}
+.form-note{font-size:11px;color:var(--text-soft);line-height:1.65;margin-bottom:20px}
+.form-note a{color:var(--teal);text-decoration:none}
+
+/* ─────────────────────────────────────────────────
+   POLICY PAGES
+───────────────────────────────────────────────── */
+.policy-wrap{display:grid;grid-template-columns:240px 1fr}
+.policy-sidebar{
+  background:var(--off-white);padding:48px 32px;
+  border-right:1px solid var(--border);
+  position:sticky;top:70px;align-self:start;
+}
+.policy-sidebar h5{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-soft);margin-bottom:16px}
+.policy-sidebar ul{list-style:none}
+.policy-sidebar ul li{
+  padding:9px 12px;border-radius:var(--r);
+  font-size:13px;color:var(--text-mid);cursor:pointer;transition:all .2s;margin-bottom:2px;
+}
+.policy-sidebar ul li:hover,.policy-sidebar ul li.active{background:var(--teal-pale);color:var(--teal)}
+.policy-body{padding:52px 60px;background:#fff}
+.policy-body h2{
+  font-family:'Playfair Display',serif;font-size:36px;font-weight:400;
+  color:var(--slate);margin-bottom:6px;
+}
+.policy-body h2 em{font-style:italic;color:var(--teal)}
+.policy-meta{font-size:11px;color:var(--text-soft);letter-spacing:.06em;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.policy-body h3{font-size:16px;font-weight:500;color:var(--slate);margin:28px 0 10px}
+.policy-body p{font-size:14px;color:var(--text-mid);line-height:1.85;margin-bottom:14px}
+.policy-body ul{padding-left:18px;margin-bottom:14px}
+.policy-body ul li{font-size:14px;color:var(--text-mid);line-height:1.8;margin-bottom:6px}
+.policy-highlight{
+  background:var(--mint);border-left:3px solid var(--teal);
+  border-radius:0 var(--r) var(--r) 0;
+  padding:16px 20px;margin:24px 0;
+  font-size:13px;color:var(--slate);line-height:1.7;
+}
+
+/* ── MISC ── */
+.page-sep{
+  padding:14px 32px;background:var(--off-white);
+  border-top:2px dashed var(--border);border-bottom:2px dashed var(--border);
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-soft);
+  text-align:center;
+}
+.meta-bar{
+  background:var(--teal);color:rgba(255,255,255,.7);
+  font-size:10px;letter-spacing:.12em;padding:7px 24px;
+  display:flex;justify-content:space-between;
+}
+.meta-bar span{color:#fff}
+.section-h2{
+  font-family:'Playfair Display',serif;
+  font-size:42px;font-weight:400;color:var(--slate);
+  line-height:1.1;margin-bottom:12px;
+}
+.section-h2 em{font-style:italic;color:var(--teal)}
+.section-sub{font-size:15px;color:var(--text-mid);font-weight:300;line-height:1.7;max-width:480px}
+.map-box{
+  background:linear-gradient(135deg,#D8EEF5,#C2E0EF);
+  height:260px;border-radius:var(--r-lg);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(30,48,64,.3);margin-top:24px;
+}
+.map-pin-icon{
+  position:absolute;
+  width:32px;height:32px;background:var(--teal);border-radius:50% 50% 50% 0;
+  transform:rotate(-45deg);
+  box-shadow:0 4px 16px rgba(26,140,122,.35);
+}
+.map-pin-icon::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:10px;height:10px;background:#fff;border-radius:50%}
+</style>
+</head>
+<body>
+
+<div class="meta-bar">
+  <span>WIREFRAME — Diamond Touch Cleaning · Premium Redesign Proposal</span>
+  <span style="color:rgba(255,255,255,.6)">Muhammad Nawaz · Digital Fanatics · +923029128794</span>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SHARED NAV (repeated in each page for clarity)
+════════════════════════════════════════════ -->
+
+<!-- ══ PAGE: HOME ══ -->
+<div id="home" class="page active">
+<nav>
+  <div class="nav-logo" onclick="goto('home')">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/>
+        <circle cx="10" cy="10" r="3" fill="white"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <strong>Diamond Touch</strong>
+      <span>Cleaning London</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" class="active" onclick="goto('home');return false">Home</a></li>
+    <li><a href="#" onclick="goto('services');return false">Our Services</a></li>
+    <li><a href="#" onclick="goto('pricing');return false">Pricing</a></li>
+    <li><a href="#" onclick="goto('contact');return false">Contact</a></li>
+    <li><a href="#" onclick="goto('terms');return false" style="font-size:11px;color:var(--text-soft)">T&C</a></li>
+    <li><a href="#" onclick="goto('privacy');return false" style="font-size:11px;color:var(--text-soft)">Privacy</a></li>
+    <li><a href="#" onclick="goto('refund');return false" style="font-size:11px;color:var(--text-soft)">Refunds</a></li>
+    <li><a href="#" class="nav-book" onclick="goto('contact');return false">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">London's Trusted Cleaning Specialists</div>
+    <h1 class="hero-h1">Your Space,<br><em>Spotlessly</em><br>Transformed.</h1>
+    <p class="hero-sub">Professional residential and commercial cleaning across Greater London. Family-owned, fully insured, and built around making your life easier.</p>
+    <div class="hero-actions">
+      <a class="btn btn-teal btn-arrow" href="#" onclick="goto('contact');return false">Book a Clean</a>
+      <a class="btn btn-outline btn-arrow" href="#" onclick="goto('services');return false">Our Services</a>
+    </div>
+    <div class="hero-proof">
+      <div class="hero-proof-avatars">
+        <div class="avatar">JD</div>
+        <div class="avatar">SR</div>
+        <div class="avatar">MT</div>
+        <div class="avatar">+</div>
+      </div>
+      <div class="hero-proof-text">
+        <strong>500+ Happy Clients</strong>
+        Trusted across Greater London
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-box">
+      <div class="hero-img-label">[Hero Lifestyle Photo]<br><span style="font-size:10px;opacity:.6">Bright, clean interior shot</span></div>
+    </div>
+    <div class="hero-float-card">
+      <div class="hfc-top">
+        <div class="hfc-dot"></div>
+        <div class="hfc-label">Satisfied Clients</div>
+      </div>
+      <div class="hfc-big">500+</div>
+      <div class="hfc-sub">Cleans completed across London</div>
+    </div>
+    <div class="hero-float-rating">
+      <div class="stars">★★★★★</div>
+      <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--slate);margin-bottom:2px">4.9</div>
+      <div class="rating-text">Verified Reviews</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Fully Insured &amp; Vetted
+  </div>
+  <div class="trust-div"></div>
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    All Supplies Included
+  </div>
+  <div class="trust-div"></div>
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+    Family-Owned Business
+  </div>
+  <div class="trust-div"></div>
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    Always On Time
+  </div>
+  <div class="trust-div"></div>
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 12 19.79 19.79 0 011 3.18 2 2 0 013 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6z"/></svg>
+    WhatsApp &amp; Phone Bookings
+  </div>
+  <div class="trust-div"></div>
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    All London Boroughs
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="why-section">
+  <div class="why-grid">
+    <div>
+      <div class="eyebrow">Why Diamond Touch</div>
+      <h2 class="section-h2">We Don't Just Clean.<br><em>We Care.</em></h2>
+      <p class="section-sub">A family-owned business built on trust, reliability, and results. We treat every home and office as if it were our own.</p>
+      <div class="why-points">
+        <div class="why-pt">
+          <div class="why-pt-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h4>Fully Insured</h4>
+            <p>Complete public liability insurance covers every job. You're always protected.</p>
+          </div>
+        </div>
+        <div class="why-pt">
+          <div class="why-pt-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="8 12 10.5 14.5 16 9"/></svg>
+          </div>
+          <div>
+            <h4>100% Satisfaction Guarantee</h4>
+            <p>Not happy? We return and reclean at zero extra cost. Every single time.</p>
+          </div>
+        </div>
+        <div class="why-pt">
+          <div class="why-pt-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18M3 15h18"/></svg>
+          </div>
+          <div>
+            <h4>Flexible Scheduling</h4>
+            <p>One-off, weekly, or fortnightly — we adapt to your routine, not the other way around.</p>
+          </div>
+        </div>
+        <div class="why-pt">
+          <div class="why-pt-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <h4>All Supplies Provided</h4>
+            <p>We arrive fully equipped. No shopping lists, no preparation needed from you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual">
+      <div class="why-visual-inner">[Interior Photography]<br><span style="font-size:9px">Clean, bright living space</span></div>
+      <div class="why-stat-card">
+        <div class="wsc-item"><div class="wsc-num">500+</div><div class="wsc-lbl">Cleans Done</div></div>
+        <div class="wsc-item"><div class="wsc-num">4.9★</div><div class="wsc-lbl">Avg Rating</div></div>
+        <div class="wsc-item"><div class="wsc-num">100%</div><div class="wsc-lbl">Guaranteed</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-section">
+  <div class="services-top">
+    <div>
+      <div class="eyebrow">What We Offer</div>
+      <h2 class="section-h2">Every Clean,<br><em>Perfectly Done.</em></h2>
+    </div>
+    <a class="btn btn-outline btn-arrow" href="#" onclick="goto('services');return false">View All Services</a>
+  </div>
+  <div class="services-grid">
+    <div class="service-card" onclick="goto('services')">
+      <div class="sc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="sc-cat">Residential</div>
+      <h3>Domestic Cleaning</h3>
+      <p>Regular or one-off home cleaning for busy professionals and families. We bring the sparkle, you enjoy the calm.</p>
+      <div class="sc-price"><span>From £20 / hour</span><span>→</span></div>
+    </div>
+    <div class="service-card" onclick="goto('services')">
+      <div class="sc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+      <div class="sc-cat">Commercial</div>
+      <h3>Office &amp; Commercial</h3>
+      <p>Professional workspace cleaning tailored to your schedule. Hygienic, presentable, every day.</p>
+      <div class="sc-price"><span>From £19 / hour</span><span>→</span></div>
+    </div>
+    <div class="service-card" onclick="goto('services')">
+      <div class="sc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="1.8"><path d="M5 12H3l9-9 9 9h-2M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a1 1 0 011-1h4a1 1 0 011 1v6"/></svg></div>
+      <div class="sc-cat">Tenancy</div>
+      <h3>Move-In / Move-Out</h3>
+      <p>End-of-tenancy cleaning to full landlord standards. We help you get your deposit back, guaranteed.</p>
+      <div class="sc-price"><span>Studio from £120</span><span>→</span></div>
+    </div>
+    <div class="service-card" onclick="goto('services')">
+      <div class="sc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+      <div class="sc-cat">Short-Let</div>
+      <h3>Airbnb Cleaning</h3>
+      <p>Guest-ready turnovers every time. Linen change, sanitisation, and restocking included.</p>
+      <div class="sc-price"><span>Studio from £35</span><span>→</span></div>
+    </div>
+    <div class="service-card" onclick="goto('services')">
+      <div class="sc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+      <div class="sc-cat">Specialist</div>
+      <h3>Upholstery &amp; Fabrics</h3>
+      <p>Deep sofa, mattress, and carpet cleaning using safe, allergen-removing techniques.</p>
+      <div class="sc-price"><span>2-Seater from £60</span><span>→</span></div>
+    </div>
+    <div class="service-card" onclick="goto('services')">
+      <div class="sc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+      <div class="sc-cat">Deep Clean</div>
+      <h3>Oven &amp; Hard Floors</h3>
+      <p>Specialist oven and floor cleaning — grease, stains, and grime gone for good.</p>
+      <div class="sc-price"><span>Oven from £40</span><span>→</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process-section">
+  <div class="eyebrow">How It Works</div>
+  <h2 class="process-h">Book in Minutes.<br><em>Sparkling</em> in Hours.</h2>
+  <div class="process-steps">
+    <div class="process-line"></div>
+    <div class="step">
+      <div class="step-circle">1</div>
+      <h4>Get in Touch</h4>
+      <p>Call, WhatsApp, or fill our form. We respond within the hour — always.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">2</div>
+      <h4>Get Your Quote</h4>
+      <p>We assess your needs and provide a clear, transparent, no-surprise quote.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">3</div>
+      <h4>We Show Up</h4>
+      <p>Fully equipped team arrives on time with all supplies — no prep needed from you.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">4</div>
+      <h4>Enjoy the Result</h4>
+      <p>Walk into a beautifully cleaned space. Not happy? We come back, free of charge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:0">
+    <div>
+      <div class="eyebrow">Client Reviews</div>
+      <h2 class="section-h2">Real People,<br><em>Real Results.</em></h2>
+    </div>
+    <div style="text-align:right;padding-bottom:8px">
+      <div style="font-family:'Playfair Display',serif;font-size:48px;color:var(--slate)">4.9</div>
+      <div class="stars">★★★★★</div>
+      <div style="font-size:11px;color:var(--text-soft);margin-top:3px">Verified average</div>
+    </div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card primary">
+      <div class="quote-icon">"</div>
+      <p class="testi-text">I was genuinely amazed by the level of cleanliness and professionalism. They exceeded every expectation and I've been using them every two weeks since.</p>
+      <div class="testi-reviewer">
+        <div class="rev-av">JD</div>
+        <div>
+          <div class="rev-name">John Doe</div>
+          <div class="rev-loc">Leyton, London</div>
+          <div class="stars-sm" style="color:rgba(255,255,255,.7);margin-top:2px">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="quote-icon" style="color:var(--teal-pale)">"</div>
+      <p class="testi-text">Used Diamond Touch for our end-of-tenancy. Got the full deposit back, no questions asked. The place was absolutely spotless.</p>
+      <div class="testi-reviewer">
+        <div class="rev-av">SR</div>
+        <div>
+          <div class="rev-name">Sarah Richards</div>
+          <div class="rev-loc">Hackney, London</div>
+          <div class="stars-sm" style="margin-top:2px">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="quote-icon" style="color:var(--teal-pale)">"</div>
+      <p class="testi-text">They do our Airbnb turnovers every week. Always on time, always perfect. Our guests constantly mention how clean the flat is in their reviews.</p>
+      <div class="testi-reviewer">
+        <div class="rev-av">MT</div>
+        <div>
+          <div class="rev-name">Michael T.</div>
+          <div class="rev-loc">Stratford, London</div>
+          <div class="stars-sm" style="margin-top:2px">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="coverage-section">
+  <div class="coverage-inner">
+    <div style="flex-shrink:0">
+      <div class="eyebrow">Where We Work</div>
+      <h2 class="section-h2" style="font-size:34px">All of <em>Greater</em><br><em>London</em></h2>
+      <p style="font-size:13px;color:var(--text-soft);max-width:220px;margin-top:8px;line-height:1.65">Based in Leyton E10 — covering every borough.</p>
+    </div>
+    <div class="coverage-badges">
+      <span class="badge">Leyton</span><span class="badge">Stratford</span><span class="badge">Walthamstow</span><span class="badge">Hackney</span><span class="badge">Canary Wharf</span><span class="badge">Bethnal Green</span><span class="badge">Bow</span><span class="badge">Ilford</span><span class="badge">Barking</span><span class="badge">Shoreditch</span><span class="badge">Islington</span><span class="badge">Southwark</span><span class="badge">Greenwich</span><span class="badge">Deptford</span><span class="badge">Lewisham</span><span class="badge">Romford</span><span class="badge">Brixton</span><span class="badge">Clapham</span><span class="badge">Richmond</span><span class="badge">+ All Boroughs</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="eyebrow" style="justify-content:center">Ready to Book?</div>
+  <h2 class="section-h2" style="font-size:48px;text-align:center;max-width:600px;margin:0 auto 14px">Your Cleanest Space<br>Is <em>One Call Away.</em></h2>
+  <p style="text-align:center;max-width:440px;margin:0 auto 36px;color:var(--text-mid);font-weight:300">No obligation. Free quote. We respond fast. Join hundreds of satisfied London clients.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-teal btn-arrow" href="#" onclick="goto('contact');return false">Book Your Clean</a>
+    <a class="btn btn-outline btn-arrow" href="#" onclick="goto('pricing');return false">See Pricing</a>
+  </div>
+  <div class="cta-contact">
+    <div class="cta-contact-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 12 19.79 19.79 0 011 3.18 2 2 0 013 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6z"/></svg>
+      +44 7510 080786
+    </div>
+    <div class="cta-contact-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      info@diamond-touch-cleaning.co.uk
+    </div>
+    <div class="cta-contact-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      242A High Road Leyton, E10 5PW
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-layout">
+    <div>
+      <div class="eyebrow">Questions</div>
+      <h2 class="section-h2">Common<br><em>Questions</em><br>Answered.</h2>
+      <p style="font-size:14px;color:var(--text-soft);line-height:1.75;margin-top:16px">Can't find the answer you're looking for? We're just a message away.</p>
+      <a class="btn btn-teal" style="margin-top:24px;display:inline-flex" href="#" onclick="goto('contact');return false">Contact Us</a>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">What areas do you serve?</div><div class="faq-a">We proudly serve the Greater London area, including all boroughs and surrounding areas. We're based in Leyton, E10 5PW.</div></div>
+      <div class="faq-item"><div class="faq-q">Do you provide cleaning supplies and equipment?</div><div class="faq-a">Yes — we arrive fully equipped with all cleaning supplies and tools. You don't need to provide or prepare anything.</div></div>
+      <div class="faq-item"><div class="faq-q">How do I book an appointment?</div><div class="faq-a">You can call, WhatsApp, or email us. You can also use our online booking form on the Contact page. We respond quickly — usually within the hour.</div></div>
+      <div class="faq-item"><div class="faq-q">Are your cleaners insured and background-checked?</div><div class="faq-a">Absolutely. All team members are background-checked and fully covered by public liability insurance. Your home is in safe hands.</div></div>
+      <div class="faq-item"><div class="faq-q">What if I'm not happy with the clean?</div><div class="faq-a">We guarantee your satisfaction. If you're not happy with any aspect, contact us within 24 hours and we'll return to fix it at no extra cost.</div></div>
+      <div class="faq-item"><div class="faq-q">Do you offer regular weekly or fortnightly cleaning?</div><div class="faq-a">Yes — we offer recurring packages at preferential rates. Whether you want weekly, fortnightly, or monthly, we'll create a schedule that works for you.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="nav-logo" style="cursor:default">
+        <div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div>
+        <div class="nav-logo-text"><strong style="color:#fff">Diamond Touch</strong><span>Cleaning London</span></div>
+      </div>
+      <p class="footer-brand-desc">London's trusted cleaning specialists. Family-owned and operated, delivering spotless results with a personal touch since day one.</p>
+      <div class="social-row">
+        <div class="soc-btn">f</div>
+        <div class="soc-btn">W</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li onclick="goto('home')">Home</li>
+        <li onclick="goto('services')">Our Services</li>
+        <li onclick="goto('pricing')">Pricing</li>
+        <li onclick="goto('contact')">Contact Us</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li onclick="goto('terms')">Terms &amp; Conditions</li>
+        <li onclick="goto('privacy')">Privacy Policy</li>
+        <li onclick="goto('refund')">Refund &amp; Cancellation</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <div class="footer-contact-line">📍 242A High Road Leyton, London, E10 5PW</div>
+      <div class="footer-contact-line">📞 +44 7510 080786</div>
+      <div class="footer-contact-line">✉️ info@diamond-touch-cleaning.co.uk</div>
+      <a class="btn btn-teal" style="margin-top:16px;display:inline-flex;font-size:12px" href="#" onclick="goto('contact');return false">Book a Clean →</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Diamond Touch Cleaning Ltd. All rights reserved. By using our services you agree to our <a href="#" onclick="goto('terms');return false">Terms</a>, <a href="#" onclick="goto('privacy');return false">Privacy Policy</a> and <a href="#" onclick="goto('refund');return false">Refund &amp; Cancellation Policy</a>.</span>
+    <span style="white-space:nowrap;margin-left:20px;opacity:.4">Designed by Digital Fanatics</span>
+  </div>
+</footer>
+</div><!-- /home -->
+
+
+<!-- ══ PAGE: SERVICES ══ -->
+<div id="services" class="page">
+<nav>
+  <div class="nav-logo" onclick="goto('home')">
+    <div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div>
+    <div class="nav-logo-text"><strong>Diamond Touch</strong><span>Cleaning London</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="goto('home');return false">Home</a></li>
+    <li><a href="#" class="active" onclick="goto('services');return false">Our Services</a></li>
+    <li><a href="#" onclick="goto('pricing');return false">Pricing</a></li>
+    <li><a href="#" onclick="goto('contact');return false">Contact</a></li>
+    <li><a href="#" onclick="goto('terms');return false" style="font-size:11px;color:var(--text-soft)">T&C</a></li>
+    <li><a href="#" onclick="goto('privacy');return false" style="font-size:11px;color:var(--text-soft)">Privacy</a></li>
+    <li><a href="#" onclick="goto('refund');return false" style="font-size:11px;color:var(--text-soft)">Refunds</a></li>
+    <li><a href="#" class="nav-book" onclick="goto('contact');return false">Book Now</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <div class="breadcrumb">Home <span>/ Our Cleaning Services</span></div>
+  <h1>Sparkling Spaces,<br><em>Simplified Lives.</em></h1>
+  <p>A complete range of professional cleaning services — residential, commercial, and specialist. We handle the mess so you can focus on what matters.</p>
+</div>
+
+<div class="services-full">
+  <div class="svc-row">
+    <div class="svc-img"><div class="svc-badge-img">Residential</div>[Photo]</div>
+    <div class="svc-info">
+      <h3>Domestic &amp; Residential Cleaning</h3>
+      <p>Keep your home fresh and spotless with our reliable domestic cleaning services. From regular cleans to one-off and deep cleans, we cater to busy professionals and families seeking a pristine living environment.</p>
+      <div class="svc-tags"><span class="tag">Regular Cleaning</span><span class="tag">One-Off Clean</span><span class="tag">Deep Clean</span><span class="tag">Spring Clean</span></div>
+    </div>
+    <div class="svc-price-block">
+      <div><div class="svc-from">Starting from</div><div class="svc-price">£20<span style="font-size:16px">/hr</span></div><div class="svc-note">Min. 2 hours</div></div>
+      <a class="btn btn-teal" style="font-size:12px" href="#" onclick="goto('contact');return false">Book Now</a>
+    </div>
+  </div>
+  <div class="svc-row">
+    <div class="svc-img"><div class="svc-badge-img">Tenancy</div>[Photo]</div>
+    <div class="svc-info">
+      <h3>Move-In / Move-Out Cleaning</h3>
+      <p>Ensure a stress-free move with our comprehensive end-of-tenancy cleaning. Designed to meet landlord and agency standards — we guarantee a spotless property and your deposit back.</p>
+      <div class="svc-tags"><span class="tag">Full Property</span><span class="tag">Landlord Standard</span><span class="tag">Deposit Guarantee</span><span class="tag">All Sizes</span></div>
+    </div>
+    <div class="svc-price-block">
+      <div><div class="svc-from">Studio flat from</div><div class="svc-price">£120</div><div class="svc-note">1-bed from £160</div></div>
+      <a class="btn btn-teal" style="font-size:12px" href="#" onclick="goto('contact');return false">Book Now</a>
+    </div>
+  </div>
+  <div class="svc-row">
+    <div class="svc-img"><div class="svc-badge-img">Commercial</div>[Photo]</div>
+    <div class="svc-info">
+      <h3>Commercial &amp; Office Cleaning</h3>
+      <p>Maintain a professional and welcoming workspace with our flexible commercial cleaning solutions. Tailored to your business hours — offices, shops, and shared spaces kept hygienic daily.</p>
+      <div class="svc-tags"><span class="tag">Offices</span><span class="tag">Retail</span><span class="tag">Flexible Hours</span><span class="tag">Regular Contract</span></div>
+    </div>
+    <div class="svc-price-block">
+      <div><div class="svc-from">Starting from</div><div class="svc-price">£19<span style="font-size:16px">/hr</span></div><div class="svc-note">Varies by size</div></div>
+      <a class="btn btn-teal" style="font-size:12px" href="#" onclick="goto('contact');return false">Book Now</a>
+    </div>
+  </div>
+  <div class="svc-row">
+    <div class="svc-img"><div class="svc-badge-img">Airbnb</div>[Photo]</div>
+    <div class="svc-info">
+      <h3>Airbnb / Short-Let Cleaning</h3>
+      <p>Guest-ready turnarounds every time. Includes linen change, bathroom &amp; kitchen sanitisation, rubbish removal, and essentials restocking. Keep your reviews glowing.</p>
+      <div class="svc-tags"><span class="tag">Linen Change</span><span class="tag">Sanitisation</span><span class="tag">Restocking</span><span class="tag">Fast Turnaround</span></div>
+    </div>
+    <div class="svc-price-block">
+      <div><div class="svc-from">Studio / 1-bed from</div><div class="svc-price">£35</div><div class="svc-note">2-bed from £50</div></div>
+      <a class="btn btn-teal" style="font-size:12px" href="#" onclick="goto('contact');return false">Book Now</a>
+    </div>
+  </div>
+  <div class="svc-row">
+    <div class="svc-img"><div class="svc-badge-img">Upholstery</div>[Photo]</div>
+    <div class="svc-info">
+      <h3>Upholstery &amp; Fabric Cleaning</h3>
+      <p>Restore your furniture's freshness with professional upholstery and fabric cleaning. Stains, dust, and allergens eliminated from sofas, mattresses, and carpets using safe techniques.</p>
+      <div class="svc-tags"><span class="tag">Sofa Cleaning</span><span class="tag">Mattress Cleaning</span><span class="tag">Carpet Cleaning</span><span class="tag">Allergen-Free</span></div>
+    </div>
+    <div class="svc-price-block">
+      <div><div class="svc-from">2-seater sofa from</div><div class="svc-price">£60</div><div class="svc-note">Carpet from £25/room</div></div>
+      <a class="btn btn-teal" style="font-size:12px" href="#" onclick="goto('contact');return false">Book Now</a>
+    </div>
+  </div>
+  <div class="svc-row">
+    <div class="svc-img"><div class="svc-badge-img">Specialist</div>[Photo]</div>
+    <div class="svc-info">
+      <h3>Oven &amp; Hard Floor Cleaning</h3>
+      <p>Specialist deep cleaning inside and out for ovens and fridges — removing grease, stains, and odours. Hard floor cleaning for all surfaces: tiles, wood, vinyl, polished to perfection.</p>
+      <div class="svc-tags"><span class="tag">Oven Deep Clean</span><span class="tag">Fridge Clean</span><span class="tag">Tile Floors</span><span class="tag">Wood &amp; Vinyl</span></div>
+    </div>
+    <div class="svc-price-block">
+      <div><div class="svc-from">Oven from</div><div class="svc-price">£40</div><div class="svc-note">Hard floors from £20/room</div></div>
+      <a class="btn btn-teal" style="font-size:12px" href="#" onclick="goto('contact');return false">Book Now</a>
+    </div>
+  </div>
+</div>
+
+<section class="cta-section" style="padding:60px 52px">
+  <h2 class="section-h2" style="font-size:38px;text-align:center">Not Sure Which Service?<br><em>Let's Find Out Together.</em></h2>
+  <p style="text-align:center;max-width:400px;margin:12px auto 28px;color:var(--text-mid)">Drop us a message and we'll recommend the best service for your space and budget.</p>
+  <div class="cta-buttons"><a class="btn btn-teal btn-arrow" href="#" onclick="goto('contact');return false">Get a Free Quote</a><a class="btn btn-outline btn-arrow" href="#" onclick="goto('pricing');return false">View Pricing</a></div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="nav-logo" style="cursor:default"><div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div><div class="nav-logo-text"><strong style="color:#fff">Diamond Touch</strong><span>Cleaning London</span></div></div>
+      <p class="footer-brand-desc">London's trusted cleaning specialists. Family-owned, delivering spotless results with a personal touch.</p>
+      <div class="social-row"><div class="soc-btn">f</div><div class="soc-btn">W</div></div>
+    </div>
+    <div class="footer-col"><h5>Pages</h5><ul><li onclick="goto('home')">Home</li><li onclick="goto('services')">Our Services</li><li onclick="goto('pricing')">Pricing</li><li onclick="goto('contact')">Contact Us</li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li onclick="goto('terms')">Terms &amp; Conditions</li><li onclick="goto('privacy')">Privacy Policy</li><li onclick="goto('refund')">Refund &amp; Cancellation</li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><div class="footer-contact-line">📍 242A High Road Leyton, E10 5PW</div><div class="footer-contact-line">📞 +44 7510 080786</div><div class="footer-contact-line">✉️ info@diamond-touch-cleaning.co.uk</div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Diamond Touch Cleaning Ltd. All rights reserved. <a href="#" onclick="goto('terms');return false">Terms</a> · <a href="#" onclick="goto('privacy');return false">Privacy</a> · <a href="#" onclick="goto('refund');return false">Refund Policy</a></span><span style="opacity:.4">Designed by Digital Fanatics</span></div>
+</footer>
+</div><!-- /services -->
+
+
+<!-- ══ PAGE: PRICING ══ -->
+<div id="pricing" class="page">
+<nav>
+  <div class="nav-logo" onclick="goto('home')"><div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div><div class="nav-logo-text"><strong>Diamond Touch</strong><span>Cleaning London</span></div></div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="goto('home');return false">Home</a></li>
+    <li><a href="#" onclick="goto('services');return false">Our Services</a></li>
+    <li><a href="#" class="active" onclick="goto('pricing');return false">Pricing</a></li>
+    <li><a href="#" onclick="goto('contact');return false">Contact</a></li>
+    <li><a href="#" onclick="goto('terms');return false" style="font-size:11px;color:var(--text-soft)">T&C</a></li>
+    <li><a href="#" onclick="goto('privacy');return false" style="font-size:11px;color:var(--text-soft)">Privacy</a></li>
+    <li><a href="#" onclick="goto('refund');return false" style="font-size:11px;color:var(--text-soft)">Refunds</a></li>
+    <li><a href="#" class="nav-book" onclick="goto('contact');return false">Book Now</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <div class="breadcrumb">Home <span>/ Pricing</span></div>
+  <h1>Transparent Pricing.<br><em>No Surprises.</em></h1>
+  <p>Clear, honest pricing for every service. All figures are starting estimates — we always quote upfront before any work begins.</p>
+</div>
+
+<div class="pricing-page">
+  <div class="eyebrow">Popular Packages</div>
+  <h2 class="section-h2">Residential Cleaning <em>Packages</em></h2>
+  <div class="pricing-cards">
+    <div class="pc">
+      <div class="pc-cat">Regular</div>
+      <h3>Standard Clean</h3>
+      <p style="font-size:13px;color:var(--text-soft);line-height:1.65;margin-bottom:0">Ideal for keeping your home consistently fresh week to week.</p>
+      <div class="pc-price-wrap"><div class="pc-price">£20</div><div class="pc-unit">per hour (min. 2 hours)</div></div>
+      <ul class="pc-features">
+        <li>Dusting &amp; vacuuming all rooms</li>
+        <li>Kitchen &amp; bathroom clean</li>
+        <li>Mopping hard floors</li>
+        <li>Bin emptying &amp; tidying</li>
+        <li>All supplies included</li>
+      </ul>
+      <a class="btn btn-outline btn-arrow" style="width:100%;justify-content:center" href="#" onclick="goto('contact');return false">Book Standard</a>
+    </div>
+    <div class="pc featured">
+      <div class="pc-badge">Most Popular</div>
+      <div class="pc-cat">One-Off</div>
+      <h3>One-Off Clean</h3>
+      <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:0">A full single clean — perfect when you need a complete reset.</p>
+      <div class="pc-price-wrap"><div class="pc-price">£22</div><div class="pc-unit">per hour</div></div>
+      <ul class="pc-features">
+        <li>Everything in Standard Clean</li>
+        <li>Inside cupboards &amp; drawers</li>
+        <li>Window sills &amp; skirting boards</li>
+        <li>Inside oven (on request)</li>
+        <li>Flexible scheduling</li>
+      </ul>
+      <a class="btn btn-white btn-arrow" style="width:100%;justify-content:center" href="#" onclick="goto('contact');return false">Book One-Off</a>
+    </div>
+    <div class="pc">
+      <div class="pc-cat">Deep Clean</div>
+      <h3>Deep / Spring Clean</h3>
+      <p style="font-size:13px;color:var(--text-soft);line-height:1.65;margin-bottom:0">Top-to-bottom deep clean for a complete home transformation.</p>
+      <div class="pc-price-wrap"><div class="pc-price">£160</div><div class="pc-unit">1-bed flat starting from</div></div>
+      <ul class="pc-features">
+        <li>Full deep clean of all rooms</li>
+        <li>Inside all appliances</li>
+        <li>Behind &amp; under furniture</li>
+        <li>Limescale &amp; grout removal</li>
+        <li>Satisfaction guaranteed</li>
+      </ul>
+      <a class="btn btn-outline btn-arrow" style="width:100%;justify-content:center" href="#" onclick="goto('contact');return false">Book Deep Clean</a>
+    </div>
+  </div>
+  <div style="background:var(--mint);border:1px solid rgba(26,140,122,.2);border-radius:var(--r);padding:14px 20px;font-size:13px;color:var(--slate);display:flex;align-items:center;gap:10px">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A8C7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    Prices shown are starting estimates. Final costs are confirmed after a brief property discussion. We always quote upfront — no surprises.
+  </div>
+</div>
+
+<div class="price-table-wrap">
+  <div class="eyebrow">Full Price List</div>
+  <h2 class="section-h2" style="margin-bottom:32px">All Services &amp; <em>Pricing</em></h2>
+
+  <table class="ptable" style="margin-bottom:28px">
+    <thead><tr><th>🏡 Domestic &amp; Residential</th><th>Type</th><th>Price</th></tr></thead>
+    <tbody>
+      <tr><td>Regular Cleaning</td><td>Per hour (min. 2h)</td><td class="price-td">£20/hr</td></tr>
+      <tr><td>One-Off Cleaning</td><td>Per hour</td><td class="price-td">£22/hr</td></tr>
+      <tr><td>Deep Cleaning</td><td>1-bed flat</td><td class="price-td">£160–£200</td></tr>
+      <tr><td>Extra Deep / Spring Cleaning</td><td>2–3 bed</td><td class="price-td">£200–£250</td></tr>
+    </tbody>
+  </table>
+
+  <table class="ptable" style="margin-bottom:28px">
+    <thead><tr><th>🚚 Move-In / Move-Out (End of Tenancy)</th><th>Size</th><th>Price</th></tr></thead>
+    <tbody>
+      <tr><td>Studio Flat</td><td>Studio</td><td class="price-td">£120–£140</td></tr>
+      <tr><td>1-Bedroom Flat</td><td>1 Bed</td><td class="price-td">£160–£190</td></tr>
+      <tr><td>2-Bedroom Flat</td><td>2 Bed</td><td class="price-td">£200–£240</td></tr>
+      <tr><td>3-Bedroom Flat</td><td>3 Bed</td><td class="price-td">£260–£300+</td></tr>
+    </tbody>
+  </table>
+
+  <table class="ptable" style="margin-bottom:28px">
+    <thead><tr><th>🛋 Upholstery &amp; Fabrics</th><th>Type</th><th>Price</th></tr></thead>
+    <tbody>
+      <tr><td>Sofa — 2-Seater</td><td>Sofa</td><td class="price-td">£60</td></tr>
+      <tr><td>Sofa — 3-Seater</td><td>Sofa</td><td class="price-td">£80</td></tr>
+      <tr><td>Mattress Cleaning</td><td>Per mattress</td><td class="price-td">from £40</td></tr>
+      <tr><td>Carpet Cleaning</td><td>Per room</td><td class="price-td">from £25</td></tr>
+    </tbody>
+  </table>
+
+  <table class="ptable" style="margin-bottom:28px">
+    <thead><tr><th>🏠 Airbnb / Short-Let</th><th>Size</th><th>Price</th></tr></thead>
+    <tbody>
+      <tr><td>Studio / 1-Bed</td><td>Small</td><td class="price-td">£35–£50</td></tr>
+      <tr><td>2-Bed</td><td>Medium</td><td class="price-td">£50–£70</td></tr>
+      <tr><td>3-Bed</td><td>Large</td><td class="price-td">£70–£100</td></tr>
+      <tr><td>Extras (linen, restocking)</td><td>Add-on</td><td class="price-td">+£10–£20</td></tr>
+    </tbody>
+  </table>
+
+  <table class="ptable">
+    <thead><tr><th>🍳 Specialist Cleaning</th><th>Type</th><th>Price</th></tr></thead>
+    <tbody>
+      <tr><td>Oven Deep Clean</td><td>Per oven</td><td class="price-td">from £40</td></tr>
+      <tr><td>Fridge Deep Clean</td><td>Per fridge</td><td class="price-td">from £40</td></tr>
+      <tr><td>Hard Floor Cleaning</td><td>Per room</td><td class="price-td">from £20</td></tr>
+      <tr><td>Commercial Cleaning</td><td>Per hour</td><td class="price-td">£19–£25/hr</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<section class="cta-section" style="padding:60px 52px">
+  <h2 class="section-h2" style="font-size:38px;text-align:center">Not Sure What You Need?<br><em>Let's Talk.</em></h2>
+  <p style="text-align:center;max-width:380px;margin:12px auto 28px;color:var(--text-mid)">Tell us about your space and we'll recommend the right service and give you an exact quote.</p>
+  <div class="cta-buttons"><a class="btn btn-teal btn-arrow" href="#" onclick="goto('contact');return false">Get a Free Quote</a></div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div><div class="nav-logo" style="cursor:default"><div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div><div class="nav-logo-text"><strong style="color:#fff">Diamond Touch</strong><span>Cleaning London</span></div></div><p class="footer-brand-desc">London's trusted cleaning specialists. Family-owned, delivering spotless results with a personal touch.</p><div class="social-row"><div class="soc-btn">f</div><div class="soc-btn">W</div></div></div>
+    <div class="footer-col"><h5>Pages</h5><ul><li onclick="goto('home')">Home</li><li onclick="goto('services')">Our Services</li><li onclick="goto('pricing')">Pricing</li><li onclick="goto('contact')">Contact Us</li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li onclick="goto('terms')">Terms &amp; Conditions</li><li onclick="goto('privacy')">Privacy Policy</li><li onclick="goto('refund')">Refund &amp; Cancellation</li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><div class="footer-contact-line">📍 242A High Road Leyton, E10 5PW</div><div class="footer-contact-line">📞 +44 7510 080786</div><div class="footer-contact-line">✉️ info@diamond-touch-cleaning.co.uk</div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Diamond Touch Cleaning Ltd. <a href="#" onclick="goto('terms');return false">Terms</a> · <a href="#" onclick="goto('privacy');return false">Privacy</a> · <a href="#" onclick="goto('refund');return false">Refund Policy</a></span><span style="opacity:.4">Designed by Digital Fanatics</span></div>
+</footer>
+</div><!-- /pricing -->
+
+
+<!-- ══ PAGE: CONTACT ══ -->
+<div id="contact" class="page">
+<nav>
+  <div class="nav-logo" onclick="goto('home')"><div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div><div class="nav-logo-text"><strong>Diamond Touch</strong><span>Cleaning London</span></div></div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="goto('home');return false">Home</a></li>
+    <li><a href="#" onclick="goto('services');return false">Our Services</a></li>
+    <li><a href="#" onclick="goto('pricing');return false">Pricing</a></li>
+    <li><a href="#" class="active" onclick="goto('contact');return false">Contact</a></li>
+    <li><a href="#" onclick="goto('terms');return false" style="font-size:11px;color:var(--text-soft)">T&C</a></li>
+    <li><a href="#" onclick="goto('privacy');return false" style="font-size:11px;color:var(--text-soft)">Privacy</a></li>
+    <li><a href="#" onclick="goto('refund');return false" style="font-size:11px;color:var(--text-soft)">Refunds</a></li>
+    <li><a href="#" class="nav-book" onclick="goto('contact');return false">Book Now</a></li>
+  </ul>
+</nav>
+
+<div class="contact-split">
+  <div class="contact-left">
+    <div class="breadcrumb" style="color:rgba(255,255,255,.35)">Home <span style="color:var(--sky-mid)">/ Contact</span></div>
+    <h2 style="margin-top:16px">Let's Get<br>Your Space<br><em>Sparkling.</em></h2>
+    <p>We're a friendly, family-owned team. Whether you have a quick question or you're ready to book, we'd love to hear from you. We respond fast — usually within the hour.</p>
+
+    <div class="cd"><div class="cd-ic">📍</div><div><div class="cd-lbl">Address</div><div class="cd-val">242A High Road Leyton, London, E10 5PW</div></div></div>
+    <div class="cd"><div class="cd-ic">📞</div><div><div class="cd-lbl">Phone / WhatsApp</div><div class="cd-val">+44 7510 080786</div></div></div>
+    <div class="cd"><div class="cd-ic">✉️</div><div><div class="cd-lbl">Email</div><div class="cd-val">info@diamond-touch-cleaning.co.uk</div></div></div>
+    <div class="cd"><div class="cd-ic">🕐</div><div><div class="cd-lbl">Response Hours</div><div class="cd-val">Mon–Sat: 8am–7pm</div></div></div>
+
+    <div style="margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.08)">
+      <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px">Areas We Cover</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);font-size:11px;padding:4px 12px;border-radius:20px">Leyton</span>
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);font-size:11px;padding:4px 12px;border-radius:20px">Hackney</span>
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);font-size:11px;padding:4px 12px;border-radius:20px">Stratford</span>
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);font-size:11px;padding:4px 12px;border-radius:20px">Ilford</span>
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);font-size:11px;padding:4px 12px;border-radius:20px">+ All London</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:28px">
+      <div class="soc-btn">f</div>
+      <div class="soc-btn">W</div>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <div class="breadcrumb" style="margin-bottom:24px">Book a Clean or <em style="font-style:italic;color:var(--teal)">Send a Message</em></div>
+    <h3>Get in <em>Touch</em></h3>
+    <div class="form-row">
+      <div class="fg"><label>First Name *</label><input type="text" placeholder="e.g. Sarah"></div>
+      <div class="fg"><label>Last Name *</label><input type="text" placeholder="e.g. Richards"></div>
+    </div>
+    <div class="form-row">
+      <div class="fg"><label>Phone / WhatsApp *</label><input type="text" placeholder="+44 7xxx xxxxxx"></div>
+      <div class="fg"><label>Email Address</label><input type="text" placeholder="your@email.com"></div>
+    </div>
+    <div class="fg">
+      <label>Service Required *</label>
+      <select>
+        <option>— Select a Service —</option>
+        <option>Domestic / Residential Cleaning</option>
+        <option>Move-In / Move-Out Cleaning</option>
+        <option>Commercial Cleaning</option>
+        <option>Airbnb / Short-Let Cleaning</option>
+        <option>Upholstery &amp; Fabric Cleaning</option>
+        <option>Oven &amp; Hard Floor Cleaning</option>
+        <option>Not sure — please advise me</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="fg"><label>Property Postcode</label><input type="text" placeholder="e.g. E10 5PW"></div>
+      <div class="fg"><label>Preferred Date</label><input type="text" placeholder="dd / mm / yyyy"></div>
+    </div>
+    <div class="fg"><label>Additional Details</label><textarea placeholder="Property size, any specific requirements, or questions..."></textarea></div>
+    <div class="form-note">By submitting you agree to our <a href="#" onclick="goto('terms');return false">Terms &amp; Conditions</a> and <a href="#" onclick="goto('privacy');return false">Privacy Policy</a>. We'll respond within a few hours.</div>
+    <a class="btn btn-teal btn-arrow" style="width:100%;justify-content:center;padding:16px" href="#">Send Booking Request</a>
+
+    <div style="margin-top:32px">
+      <div class="map-box">
+        <div class="map-pin-icon"></div>
+        <div style="position:absolute;bottom:16px;left:16px;background:var(--slate);color:rgba(255,255,255,.7);font-size:11px;padding:8px 14px;border-radius:var(--r)">📍 242A High Road Leyton, London, E10 5PW</div>
+        <div style="position:absolute;top:16px;right:16px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(30,48,64,.3)">[Interactive Map]</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div><div class="nav-logo" style="cursor:default"><div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div><div class="nav-logo-text"><strong style="color:#fff">Diamond Touch</strong><span>Cleaning London</span></div></div><p class="footer-brand-desc">London's trusted cleaning specialists.</p><div class="social-row"><div class="soc-btn">f</div><div class="soc-btn">W</div></div></div>
+    <div class="footer-col"><h5>Pages</h5><ul><li onclick="goto('home')">Home</li><li onclick="goto('services')">Our Services</li><li onclick="goto('pricing')">Pricing</li></ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul><li onclick="goto('terms')">Terms &amp; Conditions</li><li onclick="goto('privacy')">Privacy Policy</li><li onclick="goto('refund')">Refund &amp; Cancellation</li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><div class="footer-contact-line">📍 242A High Road Leyton, E10 5PW</div><div class="footer-contact-line">📞 +44 7510 080786</div><div class="footer-contact-line">✉️ info@diamond-touch-cleaning.co.uk</div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Diamond Touch Cleaning Ltd. <a href="#" onclick="goto('terms');return false">Terms</a> · <a href="#" onclick="goto('privacy');return false">Privacy</a> · <a href="#" onclick="goto('refund');return false">Refund Policy</a></span><span style="opacity:.4">Designed by Digital Fanatics</span></div>
+</footer>
+</div><!-- /contact -->
+
+
+<!-- ══ POLICY TEMPLATE (shared layout for T&C, Privacy, Refund) ══ -->
+
+<div id="terms" class="page">
+<nav>
+  <div class="nav-logo" onclick="goto('home')"><div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div><div class="nav-logo-text"><strong>Diamond Touch</strong><span>Cleaning London</span></div></div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="goto('home');return false">Home</a></li>
+    <li><a href="#" onclick="goto('services');return false">Our Services</a></li>
+    <li><a href="#" onclick="goto('pricing');return false">Pricing</a></li>
+    <li><a href="#" onclick="goto('contact');return false">Contact</a></li>
+    <li><a href="#" class="active" onclick="goto('terms');return false" style="font-size:11px">T&C</a></li>
+    <li><a href="#" onclick="goto('privacy');return false" style="font-size:11px;color:var(--text-soft)">Privacy</a></li>
+    <li><a href="#" onclick="goto('refund');return false" style="font-size:11px;color:var(--text-soft)">Refunds</a></li>
+    <li><a href="#" class="nav-book" onclick="goto('contact');return false">Book Now</a></li>
+  </ul>
+</nav>
+<div style="background:var(--off-white);border-bottom:1px solid var(--border);padding:10px 52px;display:flex;gap:0">
+  <a href="#" onclick="goto('terms');return false" style="padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border-bottom:2px solid var(--teal);text-decoration:none;font-weight:500">Terms &amp; Conditions</a>
+  <a href="#" onclick="goto('privacy');return false" style="padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft);text-decoration:none">Privacy Policy</a>
+  <a href="#" onclick="goto('refund');return false" style="padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft);text-decoration:none">Refund &amp; Cancellation</a>
+</div>
+<div class="policy-wrap">
+  <div class="policy-sidebar">
+    <h5>Contents</h5>
+    <ul>
+      <li class="active">1. Introduction</li>
+      <li>2. Booking &amp; Payment</li>
+      <li>3. Service Delivery</li>
+      <li>4. Cancellations</li>
+      <li>5. Liability</li>
+      <li>6. Your Obligations</li>
+      <li>7. Satisfaction Guarantee</li>
+      <li>8. Contact Us</li>
+    </ul>
+  </div>
+  <div class="policy-body">
+    <div class="breadcrumb" style="margin-bottom:12px">Home <span>/ Terms &amp; Conditions</span></div>
+    <h2>Terms &amp; <em>Conditions</em></h2>
+    <div class="policy-meta">Last updated: January 2025 · Diamond Touch Cleaning Ltd · Registered in England &amp; Wales</div>
+    <div class="policy-highlight">By booking our services, you agree to these Terms &amp; Conditions. Please read them carefully before placing a booking with Diamond Touch Cleaning Ltd.</div>
+    <h3>1. Introduction</h3>
+    <p>These Terms &amp; Conditions govern the use of services provided by Diamond Touch Cleaning Ltd ("we", "us", "our"), a company registered in England and Wales, operating from 242A High Road Leyton, London, E10 5PW.</p>
+    <h3>2. Booking &amp; Payment</h3>
+    <p>All bookings are confirmed once we have agreed on the service, date, and price. Payment is due upon completion of service unless otherwise arranged. We accept bank transfer, cash, and card payment.</p>
+    <ul>
+      <li>Quotes are estimates; final charges depend on actual property condition.</li>
+      <li>We reserve the right to adjust pricing if the property requires significantly more work than estimated.</li>
+      <li>Recurring bookings are billed on a per-visit basis unless a monthly arrangement is agreed.</li>
+    </ul>
+    <h3>3. Service Delivery</h3>
+    <p>Our team will arrive at the agreed time and perform the services as outlined in your booking. We bring all necessary cleaning supplies and equipment. You are responsible for ensuring safe and clear access to the property.</p>
+    <h3>4. Cancellations &amp; Rescheduling</h3>
+    <p>We require at least 24 hours' notice for cancellation or rescheduling. Cancellations with less than 24 hours' notice may incur a cancellation fee. See our full <a href="#" onclick="goto('refund');return false" style="color:var(--teal)">Refund &amp; Cancellation Policy</a> for details.</p>
+    <h3>5. Liability</h3>
+    <p>We carry full public liability insurance. In the unlikely event of damage caused by our team, please notify us within 24 hours. We will not be held liable for pre-existing damage or items of exceptional value left in unsecured locations.</p>
+    <h3>6. Your Obligations</h3>
+    <p>You agree to provide clear, safe access to the property and to inform us of any hazards, fragile items, or specific instructions prior to our arrival.</p>
+    <h3>7. Satisfaction Guarantee</h3>
+    <p>If you are not satisfied with any aspect of our service, please contact us within 24 hours and we will return to address the issue at no additional charge.</p>
+    <h3>8. Contact Us</h3>
+    <p>For questions regarding these Terms, contact us at <span style="color:var(--teal)">info@diamond-touch-cleaning.co.uk</span> or call <span style="color:var(--teal)">+44 7510 080786</span>.</p>
+  </div>
+</div>
+<footer style="background:var(--slate);padding:28px 52px">
+  <div class="footer-bottom"><span>© 2025 Diamond Touch Cleaning Ltd. <a href="#" onclick="goto('terms');return false">Terms</a> · <a href="#" onclick="goto('privacy');return false">Privacy</a> · <a href="#" onclick="goto('refund');return false">Refund Policy</a></span><span style="opacity:.4">Designed by Digital Fanatics</span></div>
+</footer>
+</div>
+
+<div id="privacy" class="page">
+<nav>
+  <div class="nav-logo" onclick="goto('home')"><div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div><div class="nav-logo-text"><strong>Diamond Touch</strong><span>Cleaning London</span></div></div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="goto('home');return false">Home</a></li>
+    <li><a href="#" onclick="goto('services');return false">Our Services</a></li>
+    <li><a href="#" onclick="goto('pricing');return false">Pricing</a></li>
+    <li><a href="#" onclick="goto('contact');return false">Contact</a></li>
+    <li><a href="#" onclick="goto('terms');return false" style="font-size:11px;color:var(--text-soft)">T&C</a></li>
+    <li><a href="#" class="active" onclick="goto('privacy');return false" style="font-size:11px">Privacy</a></li>
+    <li><a href="#" onclick="goto('refund');return false" style="font-size:11px;color:var(--text-soft)">Refunds</a></li>
+    <li><a href="#" class="nav-book" onclick="goto('contact');return false">Book Now</a></li>
+  </ul>
+</nav>
+<div style="background:var(--off-white);border-bottom:1px solid var(--border);padding:10px 52px;display:flex;gap:0">
+  <a href="#" onclick="goto('terms');return false" style="padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft);text-decoration:none">Terms &amp; Conditions</a>
+  <a href="#" onclick="goto('privacy');return false" style="padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border-bottom:2px solid var(--teal);text-decoration:none;font-weight:500">Privacy Policy</a>
+  <a href="#" onclick="goto('refund');return false" style="padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft);text-decoration:none">Refund &amp; Cancellation</a>
+</div>
+<div class="policy-wrap">
+  <div class="policy-sidebar">
+    <h5>Contents</h5>
+    <ul>
+      <li class="active">1. Who We Are</li>
+      <li>2. Data We Collect</li>
+      <li>3. How We Use Data</li>
+      <li>4. Data Sharing</li>
+      <li>5. Your Rights</li>
+      <li>6. Cookies</li>
+      <li>7. Contact Us</li>
+    </ul>
+  </div>
+  <div class="policy-body">
+    <div class="breadcrumb" style="margin-bottom:12px">Home <span>/ Privacy Policy</span></div>
+    <h2>Privacy <em>Policy</em></h2>
+    <div class="policy-meta">Last updated: January 2025 · Diamond Touch Cleaning Ltd</div>
+    <div class="policy-highlight">We take your privacy seriously. This policy explains what data we collect, how we use it, and your rights under UK GDPR.</div>
+    <h3>1. Who We Are</h3>
+    <p>Diamond Touch Cleaning Ltd, 242A High Road Leyton, London, E10 5PW is the data controller for the personal information we collect.</p>
+    <h3>2. Data We Collect</h3>
+    <p>When you contact us or book a service, we may collect: your name, phone number, email address, property address, and service preferences. We do not collect payment card information directly.</p>
+    <h3>3. How We Use Your Data</h3>
+    <p>We use your data to: respond to enquiries, confirm bookings, deliver our services, and occasionally send service updates. We do not use your data for unrelated marketing without your consent.</p>
+    <h3>4. Data Sharing</h3>
+    <p>We do not sell or share your personal data with third parties, except where required by law or necessary to deliver your service (e.g., payment processors).</p>
+    <h3>5. Your Rights</h3>
+    <p>Under UK GDPR, you have the right to access, correct, or request deletion of your personal data at any time. Contact us at info@diamond-touch-cleaning.co.uk to exercise these rights.</p>
+    <h3>6. Cookies</h3>
+    <p>Our website may use basic cookies for functionality. We do not use tracking or advertising cookies without your consent.</p>
+    <h3>7. Contact Us</h3>
+    <p>For any privacy-related questions, contact us at <span style="color:var(--teal)">info@diamond-touch-cleaning.co.uk</span>.</p>
+  </div>
+</div>
+<footer style="background:var(--slate);padding:28px 52px">
+  <div class="footer-bottom"><span>© 2025 Diamond Touch Cleaning Ltd. <a href="#" onclick="goto('terms');return false">Terms</a> · <a href="#" onclick="goto('privacy');return false">Privacy</a> · <a href="#" onclick="goto('refund');return false">Refund Policy</a></span><span style="opacity:.4">Designed by Digital Fanatics</span></div>
+</footer>
+</div>
+
+<div id="refund" class="page">
+<nav>
+  <div class="nav-logo" onclick="goto('home')"><div class="nav-logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,1 19,6 19,14 10,19 1,14 1,6" fill="none" stroke="white" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="white"/></svg></div><div class="nav-logo-text"><strong>Diamond Touch</strong><span>Cleaning London</span></div></div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="goto('home');return false">Home</a></li>
+    <li><a href="#" onclick="goto('services');return false">Our Services</a></li>
+    <li><a href="#" onclick="goto('pricing');return false">Pricing</a></li>
+    <li><a href="#" onclick="goto('contact');return false">Contact</a></li>
+    <li><a href="#" onclick="goto('terms');return false" style="font-size:11px;color:var(--text-soft)">T&C</a></li>
+    <li><a href="#" onclick="goto('privacy');return false" style="font-size:11px;color:var(--text-soft)">Privacy</a></li>
+    <li><a href="#" class="active" onclick="goto('refund');return false" style="font-size:11px">Refunds</a></li>
+    <li><a href="#" class="nav-book" onclick="goto('contact');return false">Book Now</a></li>
+  </ul>
+</nav>
+<div style="background:var(--off-white);border-bottom:1px solid var(--border);padding:10px 52px;display:flex;gap:0">
+  <a href="#" onclick="goto('terms');return false" style="padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft);text-decoration:none">Terms &amp; Conditions</a>
+  <a href="#" onclick="goto('privacy');return false" style="padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft);text-decoration:none">Privacy Policy</a>
+  <a href="#" onclick="goto('refund');return false" style="padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border-bottom:2px solid var(--teal);text-decoration:none;font-weight:500">Refund &amp; Cancellation</a>
+</div>
+<div class="policy-wrap">
+  <div class="policy-sidebar">
+    <h5>Contents</h5>
+    <ul>
+      <li class="active">1. Overview</li>
+      <li>2. Cancellation Policy</li>
+      <li>3. Rescheduling</li>
+      <li>4. Refund Eligibility</li>
+      <li>5. Re-Clean Policy</li>
+      <li>6. How to Cancel</li>
+      <li>7. Contact Us</li>
+    </ul>
+  </div>
+  <div class="policy-body">
+    <div class="breadcrumb" style="margin-bottom:12px">Home <span>/ Refund &amp; Cancellation</span></div>
+    <h2>Refund &amp; <em>Cancellation</em></h2>
+    <div class="policy-meta">Last updated: January 2025 · Diamond Touch Cleaning Ltd</div>
+    <div class="policy-highlight">We want every clean to be perfect. If something isn't right, we'll always make it right — that's our promise to you.</div>
+    <h3>1. Overview</h3>
+    <p>Our cancellation and refund policy is designed to be fair to both our clients and our team. Please read this policy before booking.</p>
+    <h3>2. Cancellation Policy</h3>
+    <ul>
+      <li><strong>More than 24 hours before service:</strong> Full cancellation, no charge.</li>
+      <li><strong>Less than 24 hours before service:</strong> A cancellation fee of 50% of the quoted service price may apply.</li>
+      <li><strong>Same-day cancellation or no-show:</strong> Full service charge may apply to cover our team's time and travel.</li>
+    </ul>
+    <h3>3. Rescheduling</h3>
+    <p>You may reschedule your booking free of charge with at least 24 hours' notice. Rescheduling with less than 24 hours' notice may incur a small admin fee.</p>
+    <h3>4. Refund Eligibility</h3>
+    <p>Refunds are considered on a case-by-case basis. If you are dissatisfied with a completed clean, we will first attempt to resolve the issue by returning to reclean the affected area at no charge. Monetary refunds are issued at our discretion where a reclean is not possible or appropriate.</p>
+    <h3>5. Our Re-Clean Guarantee</h3>
+    <p>If you are not satisfied with the standard of cleaning, contact us within 24 hours of the service. We will return within 48 hours to address any issues, at absolutely no extra cost to you.</p>
+    <h3>6. How to Cancel or Reschedule</h3>
+    <p>To cancel or reschedule, please contact us by phone, WhatsApp, or email as soon as possible. We kindly ask for as much notice as you can give.</p>
+    <h3>7. Contact Us</h3>
+    <p>Phone / WhatsApp: <span style="color:var(--teal)">+44 7510 080786</span><br>Email: <span style="color:var(--teal)">info@diamond-touch-cleaning.co.uk</span></p>
+  </div>
+</div>
+<footer style="background:var(--slate);padding:28px 52px">
+  <div class="footer-bottom"><span>© 2025 Diamond Touch Cleaning Ltd. <a href="#" onclick="goto('terms');return false">Terms</a> · <a href="#" onclick="goto('privacy');return false">Privacy</a> · <a href="#" onclick="goto('refund');return false">Refund Policy</a></span><span style="opacity:.4">Designed by Digital Fanatics</span></div>
+</footer>
+</div>
+
+<script>
+function goto(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el=document.getElementById(id);
+  if(el){el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+}
+</script>
+</body>
+</html>
